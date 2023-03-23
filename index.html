@@ -429,11 +429,54 @@
     <!-- =========BACKDROP============= -->
     <div class="backdrop is-hidden" data-modal="">
       <div class="modal">
-        <button type="button" class="modal-btn" data-modal-close="">
+        <button type="button" class="modal-close-btn" data-modal-close="">
           <svg class="close-modal-icon" width="8px" height="8x">
             <use href="./img/icons.svg#close-modal-btn"></use>
           </svg>
         </button>
+        <h2 class="modal-title">
+          Leave your contacts and we will call you back
+        </h2>
+        <form action="" class="contact-form">
+          <label class="modal-label" for=""
+            >Name
+            <input
+              type="text"
+              class="contact-form-input"
+              name="user-name"
+              placeholder=""
+              required
+          /></label>
+          <label class="modal-label" for=""
+            >Phone<input
+              type="tel"
+              class="contact-form-input"
+              name="user-phone"
+              placeholder=""
+              required
+          /></label>
+
+          <label class="modal-label" for=""
+            >Email<input
+              type="email"
+              class="contact-form-input"
+              name="user-email"
+              placeholder=""
+              required
+          /></label>
+
+          <label class="modal-label" for=""
+            >Comment<input
+              type="text"
+              class="contact-form-input comments"
+              name="user-comments"
+              placeholder="Text input"
+          /></label>
+
+          <div class="wrapper-modal-send-btn">
+            <button type="submit" class="modal-send-btn">Send</button>
+          </div>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

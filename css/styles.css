@@ -200,7 +200,7 @@ color: var(--hover);
          }
 .hero-button{color: var(--main-background);
 background-color: var(--primary-Brand);
-font-family: 'Roboto';
+
     
     font-weight: 500;
     font-size: 16px;
@@ -445,16 +445,18 @@ width: 264px;}
         .modal {
             width: 408px;
                 min-height: 576px;
+                padding: 72px 24px 24px 24px;
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%) scale(1);
+                transition: transform var(--transition);
             background: #FCFCFC;
                 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
                 border-radius: 4px;
         }
 
-.modal-btn {
+.modal-close-btn {
     position: absolute;
     top: 24px;
     right: 24px;
@@ -472,15 +474,15 @@ width: 264px;}
         transition: background var(--transition);
       
 }
-.modal-btn:hover ,
-.modal-btn:focus{
+.moodal-close-btn:hover ,
+.modal-close-btn:focus{
    background: var(--hover); 
 }
 .close-modal-icon {
     transition: fill var(--transition);
 }
-.modal-btn:hover .close-modal-icon,
-.modal-btn:focus .close-modal-icon {
+.modal-close-btn:hover .close-modal-icon,
+.modal-close-btn:focus .close-modal-icon {
     fill: #FFFFFF;
 }
 
@@ -490,8 +492,70 @@ width: 264px;}
     pointer-events: none;
 
 }
-
+.backdrop.is-hidden .modal{
+    transform:translate(-50%, -50%) scaleY(0)
+}
+.contact-form{
+    gap: 8px;
+}
+.contact-form-input{
+        width: 360px;
+        min-height: 40px;
+        margin: 0 auto;
+        padding: 8px 16px;
+        opacity: 0.2;
+        border: 1px solid #2E2F42;
+        border-radius: 4px;
+}
+.modal-title{
+    
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #2E2F42;
+        margin-bottom: 16px;
+}
+         .modal-send-btn{
+            font-weight: 500;
+                font-size: 16px;
+                line-height: 1.5;
         
+                /* display: flex;
+                align-items: center; */
+                text-align: center;
+                letter-spacing: 0.04em;
+                color: #FFFFFF;
+                padding: 16px 32px;
+                            width: 169px;
+                height: 56px;
+                background: var(--primary-Brand);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+                border-radius: 4px;
+                border-color: transparent;
+                margin-top: 10px;
+                cursor: pointer;
+                margin-left: auto;
+                margin-right: auto;
+         }
+         .modal-label{
+            
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 1.17;
+                letter-spacing: 0.04em;
+                color: #8E8F99;
+         }
+         .comments{
+            width: 360px;
+                min-height: 120px;
+                text-align: start;
+         }
+         .wrapper-modal-send-btn{
+           display: flex;
+           justify-content: center;
+         }
 /* ============================================================== */
 
 /* Portfolio */
