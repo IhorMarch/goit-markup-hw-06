@@ -425,11 +425,24 @@
           </ul>
         </div>
       </div>
+      <div class="suscribe">
+        <hp>Subscribe</p3>
+        <form action="#" class="footer-form">
+          <input
+            type="email"
+            class="cfooter-form-input"
+            name="user_email"
+            placeholder="E-mail"
+            required
+          />
+          <button type="submit" class="modal-send-btn">Subscribe</button>
+        </form>
+      </div>
     </footer>
     <!-- =========BACKDROP============= -->
 
-    <div class="backdrop" data-modal="">
-      <div class="modal is-hidden">
+    <div class="backdrop is-hidden" data-modal="">
+      <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close="">
           <svg class="close-modal-icon" width="8px" height="8px">
             <use href="./img/icons.svg#close-modal-btn"></use>
@@ -502,17 +515,14 @@
             id="user-policy"
             type="checkbox"
             name="accept"
-            class="input-user-check"
+            class="input-user-check visually-hidden"
           />
 
           <label for="user-policy" class="modal-lable-check"
-            >I accept the terms and conditions of the
+            >I accept the terms and conditions of the&nbsp;
             <a href="#">Privacy Policy</a></label
           >
-
-          <div class="wrapper-modal-send-btn">
-            <button type="submit" class="modal-send-btn">Send</button>
-          </div>
+          <button type="submit" class="modal-send-btn">Send</button>
         </form>
       </div>
     </div>

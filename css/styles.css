@@ -474,7 +474,7 @@ width: 264px;}
         transition: background var(--transition);
       
 }
-.moodal-close-btn:hover ,
+.modal-close-btn:hover ,
 .modal-close-btn:focus{
    background: var(--hover); 
 }
@@ -496,7 +496,9 @@ width: 264px;}
     transform:translate(-50%, -50%) scaleY(0)
 }
 .contact-form{
-    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    
 }
 .modal-label{display: block;}
    .contact-form .modal-label:not(:first-child) {
@@ -517,7 +519,7 @@ width: 264px;}
 .contact-form-input:focus{
     outline: none;
     border-color: var(--primary-Brand);
-    opacity: 1;
+    /* opacity: 1; */
 }
 .contact-form-input:focus + .input-icons{
     fill: var(--primary-Brand);
@@ -543,7 +545,7 @@ width: 264px;}
                 letter-spacing: 0.04em;
                 color: #FFFFFF;
                 padding: 16px 32px;
-                            width: 169px;
+                min-width: 169px;
                 height: 56px;
                 background: var(--primary-Brand);
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -551,9 +553,16 @@ width: 264px;}
                 border-color: transparent;
                 margin-top: 10px;
                 cursor: pointer;
-                margin-left: auto;
-                margin-right: auto;
-         }
+                align-self: center;
+                transition: background-color var(--transition);
+                /* margin-left: auto;
+                margin-right: auto; */
+         } 
+         /* transition: background-color var(--transition); */
+
+.modal-send-btn:hover, .modal-send-btn:focus{
+    background-color: var(--hover)
+}
          .modal-lable-desc{
             display: block;
                 font-weight: 400;
@@ -590,7 +599,8 @@ width: 264px;}
            margin-top: 24px;
          }
          .modal-lable-check{
-            /* display: inline-block; */
+         display: flex;
+         align-items: center;
                 font-size: 12px;
                 line-height: 1.17;
                 letter-spacing: 0.04em;
@@ -616,10 +626,18 @@ width: 264px;}
             border: 1px solid #2E2F42;
                 border-radius: 2px;
                 cursor: pointer;
+                margin-right: 8px;
          }
-         .input-user-check::before + .modal-lable-check::before{
+         .input-user-check:checked + .modal-lable-check::before{
             background-color: var(--hover);
-
+            background-image: url(../img/svg/check.svg);
+            background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+         }
+         .input-user-check:focus + .modal-lable-check::before{
+  outline: 1px solid #404BBF;
+    
          }
 /* ============================================================== */
 
